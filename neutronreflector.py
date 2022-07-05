@@ -14,7 +14,7 @@ class NeutronReflectorItem(BaseReactorItem):
             return
         
         for i in range(4):
-            item = reactor.reactor[x + OFFSET_X[i]][y + OFFSET_Y[i]]
+            item = reactor.reactor[y + OFFSET_Y[i]][x + OFFSET_X[i]]
 
             if isinstance(item, BaseReactorItem):
                 item.damageItem(item.getRods())

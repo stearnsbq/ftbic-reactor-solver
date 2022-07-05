@@ -27,7 +27,7 @@ class FuelRodItem(BaseReactorItem):
         adjacent = [None for i in range(4)]
 
         for i in range(4):
-            adjacent[i] = reactor.reactor[x + OFFSET_X[i]][y + OFFSET_Y[i]]
+            adjacent[i] = reactor.reactor[y + OFFSET_Y[i]][x + OFFSET_X[i]]
 
             if isinstance(adjacent[i], NeutronReflectorItem):
                 pulses += 1

@@ -26,7 +26,7 @@ class HeatVentItem(BaseReactorItem):
         if self.componentCooling > 0:
 
             for i in range(4):
-                item = reactor[x + OFFSET_X[i]][y + OFFSET_Y[i]]
+                item = reactor[y + OFFSET_Y[i]][x + OFFSET_X[i]]
 
                 if isinstance(item, BaseReactorItem) and item.isCoolant():
                     item.damageItem(-self.componentCooling)

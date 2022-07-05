@@ -48,10 +48,10 @@ class BaseReactorItem(ABC):
 
         return damage
     
-    @abstractmethod
+
     def reactorTickPre(self, reactor, x, y):
         pass
 
-    @abstractmethod
+
     def reactorTickPost(self, reactor, x, y):
         pass

@@ -23,7 +23,7 @@ class HeatExchangerItem(BaseReactorItem):
         if self.adjacentHeatTransfer > 0:
 
             for i in range(4):
-                item = reactor[x + OFFSET_X][y + OFFSET_Y]
+                item = reactor[y + OFFSET_Y[i]][x + OFFSET_X[i]]
 
                 if isinstance(item, BaseReactorItem) and item.isHeatAcceptor():
                     sh = self.relativeDamage() * 100.0
